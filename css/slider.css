@@ -1,3 +1,31 @@
+.main-slider{
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    height: 500px;
+    position: relative;
+
+}
+
+.slider-item-buttons{
+    display: flex;
+    align-items: center;
+}
+
+.slider-item-buttons button{
+    border: none;
+    background-color: lightgrey;
+    transition: 300ms;
+    border-radius: 4px;
+    font-size: 1.7rem;
+}
+
+.slider-item-buttons button:hover{
+    color: white;
+    background-color: #ff8c00;
+    transition: 300ms;
+}
 
 .slider-item-container{
     margin: 0 auto;
@@ -36,47 +64,7 @@
     transition: 600ms;
 }
 
-.slider-item-buttons{
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    
-}
 
-.slider-item-buttons button{
-    border: none;
-    border-radius: 2px;
-    width: 32px;
-    font-size: 1.7rem;
-    background-color: rgba(211, 211, 211, 0.70);
-    transition: 300ms;
-
-}
-
-.slider-item-buttons button.left{
-    position: relative;
-    left: -100%;
-}
-
-.slider-item-buttons button.right{
-    position: relative;
-    left: 100%;
-}
-
-.slider-item-buttons:hover button.left,
-.slider-item-buttons:hover button.right{
-    left: 0;
-    transition: 300ms;
-}
-
-.slider-item-buttons button:hover{
-    color: white;
-    background-color: #ff8c00;
-    transition: 300ms;
-}
 
 .slider-item{
     position: relative;

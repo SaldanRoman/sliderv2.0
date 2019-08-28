@@ -94,6 +94,8 @@ function showText(){
 
 }
 
+let sliderInterval = setInterval(sliderNext, 5000)
+
 function hideText(){
     let timeCount = 50;
     const itemTextArr = document.querySelectorAll('.slider-item-content p, .slider-item-content a');
@@ -104,7 +106,6 @@ function hideText(){
 
 
 function sliderNext() {
-
     const leftImg = document.querySelector('.slider-item-background.left');
     leftImg.remove();
     const curentImg = document.querySelector('.slider-item-background.current');
@@ -138,8 +139,9 @@ function sliderPrevious() {
     leftImg.classList.add('current');
     leftImg.classList.remove('left');
     const leftImgIndex =  getNextIndex(leftImg, 'left');
-    sliderContainer.appendChild(generatediv('right', leftImgIndex,  arrayOfSliderProd[leftImgIndex]));
+    sliderContainer.appendChild(generatediv('left', leftImgIndex,  arrayOfSliderProd[leftImgIndex]));
     hideText();
     setTimeout(showText ,300)
 
 }
+sliderPrevious();
