@@ -1,4 +1,4 @@
-﻿fetch('test.json')
+﻿fetch('drinks.json')
   .then(response => {
     return response.json()
   })
