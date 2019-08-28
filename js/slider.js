@@ -1,4 +1,19 @@
-﻿const arrayOfSliderProd = [
+﻿fetch('test.json')
+  .then(response => {
+    return response.json()
+  })
+  .then(data => {
+    // Work with JSON data here
+    sessionStorage.setItem('drinks',JSON.stringify(data));
+  })
+  .catch(err => {
+    // Do something for an error here
+  })
+  let myData = JSON.parse( sessionStorage.getItem('drinks'));
+  console.log(myData)
+
+
+const arrayOfSliderProd = [
     {
         imgSrc: 'img/slider/1.jpg',
         title: 'Sassicaia',
@@ -142,20 +157,13 @@ function sliderPrevious() {
 }
 sliderPrevious();
 let mainsliderInterval = setInterval(sliderNext, 6000);
-let clearSlideTimeout = setTimeout(1);
 
 document.querySelector('#mainSliderButtonLeft').addEventListener('click', function(){
     clearInterval(mainsliderInterval);
-    clearTimeout(clearSlideTimeout);
-    clearSlideTimeout = setTimeout(function(){
-        mainsliderInterval = setInterval(sliderNext, 6000);
-    },5000)
+    mainsliderInterval = setInterval(sliderNext, 6000);
 });
 document.querySelector('#mainSliderButtonRight').addEventListener('click', function(){
     clearInterval(mainsliderInterval);
-    clearTimeout(clearSlideTimeout);
-    clearSlideTimeout = setTimeout(function(){
-        mainsliderInterval = setInterval(sliderNext, 6000);
-    },5000)
+    mainsliderInterval = setInterval(sliderNext, 6000);
 });
 
