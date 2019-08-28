@@ -9,8 +9,13 @@
   .catch(err => {
     // Do something for an error here
   })
-  let myData = JSON.parse( sessionStorage.getItem('drinks'));
-  console.log(myData)
+  
+  let drinksArr;
+
+  function dataParse(){
+    drinksArr = JSON.parse(sessionStorage.getItem('drinks'));
+
+  }
 
 
 const arrayOfSliderProd = [
