@@ -1,14 +1,16 @@
-﻿fetch('drinks.json')
+let myData;
+fetch('drinks.json')
   .then(response => {
     return response.json()
   })
   .then(data => {
-    // Work with JSON data here
+    myData = data;
     sessionStorage.setItem('drinks',JSON.stringify(data));
   })
   .catch(err => {
     // Do something for an error here
   })
+<<<<<<< HEAD
   
   let drinksArr;
 
@@ -16,7 +18,17 @@
     drinksArr = JSON.parse(sessionStorage.getItem('drinks'));
 
   }
+=======
+   
+  console.log(myData)
+>>>>>>> f30022461f9bef59aa8c62ee79959b17e3b89838
 
+  let drinksArr;
+
+  function dataParse(){
+    drinksArr = JSON.parse(sessionStorage.getItem('drinks'));
+
+  }
 
 const arrayOfSliderProd = [
     {
