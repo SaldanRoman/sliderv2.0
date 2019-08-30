@@ -16,12 +16,14 @@ fetch('drinks.json')
       randDrinksElementImg.setAttribute('src', obj.image);
       randDrinksElementImg.setAttribute('alt', obj.name);
 
-      let randDrinksElementName = document.createElement('p');
-      randDrinksElementName.setAttribute('class', 'random-drinks-elment-name');
-      randDrinksElementName.innerText = obj.name;
-      let randDrinksElementText = document.createElement('p');
+    //   let randDrinksElementName = document.createElement('p');
+    //   randDrinksElementName.setAttribute('class', 'random-drinks-elment-name');
+    //   randDrinksElementName.innerText = obj.name;
+      let randDrinksElementText = document.createElement('a');
+      randDrinksElementText.setAttribute('href', obj.image);
+      randDrinksElementText.setAttribute('target', '_blanck');
       randDrinksElementText.setAttribute('class', 'random-drinks-elment-text');
-      randDrinksElementText.innerText = obj.description;
+      randDrinksElementText.innerText = obj.name;
 
       let randDrinksElementPrice = document.createElement('p');
       let randDrinksElementCurrency = document.createElement('p');
@@ -37,7 +39,7 @@ fetch('drinks.json')
       
       randDrinksElementImgContainer.appendChild(randDrinksElementLink);
       randDrinksElement.appendChild(randDrinksElementImgContainer);
-      randDrinksElement.appendChild(randDrinksElementName);
+    //   randDrinksElement.appendChild(randDrinksElementName);
       randDrinksElement.appendChild(randDrinksElementText);
       randDrinksElement.appendChild(randDrinksElementPriceContainer);
       return randDrinksElement
@@ -57,3 +59,4 @@ fetch('drinks.json')
     })()
 
   })
+  

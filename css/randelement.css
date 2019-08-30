@@ -30,7 +30,13 @@
 
   .random-drinks-elment-text{
     margin-bottom: 0;
+    color: #333333;
+    text-decoration: none;
   }
+
+  .random-drinks-elment-text:hover{
+      color: #fca53c;
+}
 
   .random-drinks-elment-price{
     display: flex;
